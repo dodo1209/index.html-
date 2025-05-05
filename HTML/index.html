@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>متجر الأناقة</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header class="site-header">
+        
+        <h1 class="store-name">👑 Lunara Couture ✨</h1>
+
+        <a href="#" class="cart" onclick="toggleCart()">🛒 سلة التسوق (<span id="cart-count">0</span>)</a>
+      </header>
+      
+      <!-- سلة التسوق -->
+      <div id="cart" class="cart-box">
+        <h3>سلة التسوق</h3>
+        <div id="cart-items"></div>
+        <div id="cart-total">
+          <p>الإجمالي: <span id="total-price">0</span> ريال</p>
+          <button onclick="checkout()">إتمام الطلب</button>
+        </div>
+      </div>
+      
+
+
+    <header class="site-header">
+        <h1>Lunara Couture</h1>
+      </header>
+      
+
+  <!-- عبارة الذوق الرفيع -->
+  <section class="hero">
+    <div class="quote">
+      👗 "الأناقة ليست مجرد مظهر بل هي أسلوب حياة يُعبّر عن الذوق الرفيع والرقي في كل تفصيلة"
+    </div>
+  </section>
+
+  <!-- المنتجات -->
+  <section class="products">
+    <h2>المنتجات المتوفرة لدينا</h2>
+    <div class="product-list">
+      <div class="product">
+        <img src="https://th.bing.com/th/id/R.069a1a8905b0b973378546cc1ac30fd7?rik=tJIDBKzTu2e3fg&riu=http%3a%2f%2fmora1.com%2fcdn%2fshop%2ffiles%2fphoto_2023-11-02_17-58-45.jpg%3fv%3d1698937418&ehk=jA8BqFRH9Mj66zS89TkbDjISrQLTDTF7ROGbwaDIc4Q%3d&risl=&pid=ImgRaw&r=0" alt="فستان أحمر">
+        <h3>جكيت نسائي </h3>
+        <p>السعر: 120 شيكل</p>
+        <button onclick="addToCart(' جكيت نسائي', 120)">أضف إلى السلة</button>
+      </div>
+
+      <div class="product">
+        <img src="https://media.s-bol.com/m0RnLERk2Q30/9pZjqZ/940x1200.jpg" alt="تيشيرت رجالي">
+        <h3>شنطة نسائية </h3>
+        <p>السعر: 100 شيكل</p>
+        <button onclick="addToCart(' شنطة نسائية', 80)">أضف إلى السلة</button>
+      </div>
+
+      <div class="product">
+        <img src="https://cdna.lystit.com/400/500/tr/photos/nike/4991f804/nike-Grey-Club-Unstructured-Swoosh-Cap.jpeg" alt="جاكيت شتوي">
+        <h3> قبعة نسائية</h3>
+        <p>السعر: 80 شيكل</p>
+        <button onclick="addToCart('قبعة نسائية ', 200)">أضف إلى السلة</button>
+      </div>
+      <div class="product">
+        <img src="https://images.prom.ua/3816271057_w640_h640_muzhskoj-komplekt-nike.jpg" alt="طقم رياضي فخم ">
+        <h3>  طقم رياضي فخم</h3>
+        <p>السعر: 140 شيكل</p>
+        <button onclick="addToCart('قبعة نسائية ', 200)">أضف إلى السلة</button>
+      </div>
+      <div class="product">
+        <img src="https://3.bp.blogspot.com/-N9dzEBfhd_0/WeXT096eqeI/AAAAAAAAAsc/DWNnjuqVLtES5IPRORELSOTZSsTTW6THQCLcBGAs/s1600/14.jpg" alt="طقم رياضي فخم ">
+        <h3>  حذاء فخم </h3>
+        <p>السعر: 300 شيكل</p>
+        <button onclick="addToCart('قبعة نسائية ', 200)">أضف إلى السلة</button>
+      </div>
+      <div class="product">
+        <img src="https://th.bing.com/th/id/OIP.0qgtIIgQrr9fcs1tkfjZqgHaHa?cb=iwp1&w=1001&h=1001&rs=1&pid=ImgDetMain" alt="طقم رياضي فخم ">
+        <h3> جراب</h3>
+        <p>السعر: 25 شيكل</p>
+        <button onclick="addToCart('قبعة نسائية ', 200)">أضف إلى السلة</button>
+      </div>
+      <div class="product">
+        <img src="https://i.pinimg.com/originals/69/70/1a/69701a59261425bdb647e50527e5a926.jpg" alt="طقم رياضي فخم ">
+        <h3>ترنج نسائي</h3>
+        <p>السعر: 160 شيكل </p>
+        <button onclick="addToCart('قبعة نسائية ', 200)">أضف إلى السلة</button>
+      </div>
+      <div class="product">
+        <img src="https://i.pinimg.com/originals/f1/25/1f/f1251f0ec281813882a6ccdd24668dbb.jpg" alt="طقم رياضي فخم ">
+        <h3>  طقم رياضي فخم</h3>
+        <p>السعر: 150 شيكل</p>
+        <button onclick="addToCart('قبعة نسائية ', 200)">أضف إلى السلة</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- تواصل معنا -->
+  <section class="contact">
+    <h2>تواصل معنا</h2>
+    <a href="#contact-form" class="scroll-to-contact">
+      <span class="arrow">&#8595;</span> <!-- السهم -->
+    </a>
+    <form id="contact-form">
+      <input type="text" placeholder="الاسم" required>
+      <input type="email" placeholder="البريد الإلكتروني" required>
+      <textarea placeholder="رسالتك" required></textarea>
+      <button type="submit">إرسال</button>
+    </form>
+  </section>
+
+  <script src="script.js"></script>
+  <!-- صندوق السلة -->
+<div id="cart" style="display:none;" class="cart-box">
+    <h2>محتويات السلة</h2>
+    <div id="cart-items"></div>
+    <p>الإجمالي: <span id="total-price">0</span> ريال</p>
+    <button onclick="checkout()">إتمام الطلب</button>
+  </div>
+  
+</body>
+</html>
